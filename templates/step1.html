@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block progress %}
+<div class="step active">1</div>
+<div class="step">2</div>
+<div class="step">3</div>
+<div class="step">4</div>
+<div class="step">5</div>
+<div class="step">6</div>
+<div class="step">7</div>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Select a Resume Template</h2>
+    <form method="POST">
+        <div class="template-options">
+            <div class="template-option">
+                <input type="radio" id="template1" name="template" value="resume1" checked>
+                <label for="template1">
+                    <img src="{{ url_for('static', filename='images/temp1.jpg') }}" alt="My Image" width="80" height="80">
+                    <span>Modern</span>
+                </label>
+            </div>
+            <div class="template-option">
+                <input type="radio" id="template2" name="template" value="resume2">
+                <label for="template2">
+                    <img src="{{ url_for('static', filename='images/temp2.jpg') }}" alt="My Image" width="80" height="80">
+                    <span>Classic</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn">Continue</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

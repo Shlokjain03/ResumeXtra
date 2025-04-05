@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block progress %}
+<div class="step completed">1</div>
+<div class="step active">2</div>
+<div class="step">3</div>
+<div class="step">4</div>
+<div class="step">5</div>
+<div class="step">6</div>
+<div class="step">7</div>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Personal Information</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn">Continue</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
